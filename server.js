@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const app = express();
 const cors = require("cors");
@@ -12,6 +13,7 @@ app.get("/api", (req,res)=>{
 
 });
 
+const port = process.env.PORT || 8080
 app.listen(8080,()=>{
-    console.log("Server started on port 8080")
+    console.log(`Server started on port ${port}`)
 });
