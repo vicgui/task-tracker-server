@@ -3,13 +3,16 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const corsOptions = {
-    origin:["http://localhost:5173"]
+    origin:[
+        "http://localhost:5173",
+        "http://63.176.98.7"
+    ]
 };
 
 app.use(cors(corsOptions));
 
 app.get("/api", (req,res)=>{
-    res.json({fruits:["apple","banana","strawberry","peach"]});
+    res.json({fruits:["apple","banana","peach"]});
 
 });
 
